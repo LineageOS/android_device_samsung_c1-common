@@ -32,18 +32,27 @@ int sendit(int timeout_ms)
     char value[20];
 
     tspd = open(TSPDRV_DEVICE, O_RDWR);
-    if(tspd < 0)
+    if(tspd < 0) {
         LOGE("failed on opening /dev/tspdrv");
+    } else {
+        LOGV("opened device /dev/tspdrv");
+    }
 
     /* send tspdrv magic number */
     tspret = ioctl(tspd, TSPDRV_MAGIC_NUMBER);
-    if(tspret != 0)
+    if(tspret != 0) {
         LOGE("TSPDRV_MAGIC_NUMBER error");
+    } else {
+        LOGV("sent TSPDRV_MAGIC_NUMBER");
+    }
 
     /* enable tspdrv amp */
     tspret = ioctl(tspd, TSPDRV_ENABLE_AMP);
-    if(tspret != 0)
+    if(tspret != 0) {
         LOGE("failed on enabling AMP");
+    } else {
+        LOGV("enabled AMP");
+    }
 
     close(tspd);
 
