@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAKH///rg\u003d",
+        "filename": "init.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1610
+      },
+      "writtenOn": "2011-10-18T16:41:39Z",
+      "side": 1,
+      "message": "symlink /mnt/emmc /emmc",
+      "revId": "9f5832d0cd239da4b6d197d12ffc82539cb3c660",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
